@@ -13,3 +13,4 @@ rustup update
 rustup component add rls-preview --toolchain nightly  
 rustup component add rust-analysis --toolchain nightly  
 rustup component add rust-src --toolchain nightly  
+https://blog.foresta.me/posts/nvim_and_lsp_for_rust/  
