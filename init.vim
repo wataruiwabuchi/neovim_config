@@ -19,6 +19,7 @@ set inccommand=split
 set imdisable
 set hidden
 set nobackup
+set noswapfile
 set nowritebackup
 set conceallevel=0
 " htmlのマッチするタグに%でジャンプ
