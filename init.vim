@@ -24,6 +24,7 @@ set nowritebackup
 set conceallevel=0
 " htmlのマッチするタグに%でジャンプ
 source $VIMRUNTIME/macros/matchit.vim
+nnoremap <Space> <Nop>
 
 hi Comment ctermfg=gray
 
