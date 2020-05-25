@@ -4,6 +4,7 @@ set hidden
 let g:LanguageClient_serverCommands = {
         \ 'cpp': ['clangd'],
         \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+        \ 'go': ['gopls']
         \ }
 
 augroup LanguageClient_config
@@ -17,3 +18,5 @@ nnoremap <silent> <Space>lh :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> <Space>ld :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <Space>lr :call LanguageClient_textDocument_rename()<CR>
 nnoremap <silent> <Space>lf :call LanguageClient_textDocument_formatting()<CR>
+
+autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
