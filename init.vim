@@ -27,6 +27,9 @@ source $VIMRUNTIME/macros/matchit.vim
 nnoremap <Space> <Nop>
 highlight SignColumn ctermbg=NONE
 set updatetime=100
+set scrolloff=8
+set sidescrolloff=16
+set sidescroll=1
 
 hi Comment ctermfg=gray
 
