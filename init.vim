@@ -25,6 +25,8 @@ set conceallevel=0
 " htmlのマッチするタグに%でジャンプ
 source $VIMRUNTIME/macros/matchit.vim
 nnoremap <Space> <Nop>
+highlight SignColumn ctermbg=NONE
+set updatetime=100
 
 hi Comment ctermfg=gray
 
