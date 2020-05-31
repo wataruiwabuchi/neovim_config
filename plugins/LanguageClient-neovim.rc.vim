@@ -20,3 +20,32 @@ nnoremap <silent> <Space>lr :call LanguageClient_textDocument_rename()<CR>
 nnoremap <silent> <Space>lf :call LanguageClient_textDocument_formatting()<CR>
 
 autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
+
+let diagnosticsDisplaySettings={
+  \       '1': {
+  \           'name': 'Error',
+  \           'texthl': 'ALEError',
+  \           'signText': 'X',
+  \           'signTexthl': 'ALEErrorSign',
+  \       },
+  \       '2': {
+  \           'name': 'Warning',
+  \           'texthl': 'ALEWarning',
+  \           'signText': '!',
+  \           'signTexthl': 'ALEWarningSign',
+  \       },
+  \       '3': {
+  \           'name': 'Information',
+  \           'texthl': 'ALEInfo',
+  \           'signText': 'i',
+  \           'signTexthl': 'ALEInfoSign',
+  \       },
+  \       '4': {
+  \           'name': 'Hint',
+  \           'texthl': 'ALEInfo',
+  \           'signText': 'h',
+  \           'signTexthl': 'ALEInfoSign',
+  \       },
+  \  }
+
+let g:LanguageClient_diagnosticsDisplay=diagnosticsDisplaySettings
